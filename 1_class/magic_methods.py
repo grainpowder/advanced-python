@@ -1,6 +1,7 @@
 """
-Magic methods are methods that adds various useful built-in functionalities to a class.
-For full list of magic methods, visit https://docs.python.org/3/reference/datamodel.html#specialnames
+Magic methods are methods surrounded by dunder that adds useful built-in functionalities to a class.
+In this module, really basic elements of them are covered just to show how this works.
+https://docs.python.org/3/reference/datamodel.html#specialnames provides full list of magic methods.
 """
 
 
