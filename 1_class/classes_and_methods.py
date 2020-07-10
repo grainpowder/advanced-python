@@ -54,35 +54,22 @@ class Car:
         else:
             return [car2._id, car1._id]
 
+
+"""
+instance.__class__  : Information on class by which instance is defined
+dir()               : Returns names of all methods, properties of the object(default: current module)
+object              : Class of built-in methods, properties for defining class
+                      -> Every class inherits names of 'object' class unless specified otherwise.
+class.__dict__      : Namespace of a class(class variable included)
+instance.__dict__   : Namespace of an instance(class variable excluded)
+                      -> So if class variable is called by instance, it is searched from names that instance inherited.
+"""
+
+
 car1 = Car('Ferrari', {'color':'White', 'horsepower':400, 'price':8000, 'id':'SC110'})
-print("\n# __class__ variable -------------------------------------------")
-# Information on class by which instance is defined
-print("\n>>> print(car1.__class__)")
-print(car1.__class__)
-
-print("\n# dir function and dir(object) ---------------------------------")
-# dir() : returns names of all methods, properties of the object(default: current module)
-print("\n>>> print(dir())")
-print(dir())
-# object : class of built-in methods, properties for defining class
-print("\n>>> print(dir(object))")
-print(dir(object))
-
-print("\n# dir(class) and its __dict__ variable -------------------------")
-# Every class inherits names of 'object' class unless specified otherwise
-print("\n>>> print(dir(Car))") 
-print(dir(Car))
-# Namespace of Car class(class variable included)
-print("\n>>> print(Car.__dict__)")
-print(Car.__dict__)
-
-print("\n# dir(instance) and its __dict__ variable ----------------------")
-# Every instance inherits names of its parent class
-print("\n>>> print(dir(car1))") 
-print(dir(car1))
-# Namespace of car1 instance(class variable excluded)
-print("\n>>> print(car1.__dict__)")
-print(car1.__dict__)
-# So if class variable is called by instance, this variable is searched from inherited names
-print("\n>>> print(car1.car_count)")
-print(car1.car_count)
+print(car1.__class__)   # __main__.Car
+print(dir())            # ['Car', '__annotations__', ... , 'car1']
+print(dir(object))      # ['__class__', ... , '__subclasshook__']
+print(dir(Car))         # ['__class__', ... , '__subclasshook__'] + ['car_count', ... , 'modify_count']
+print(Car.__dict__)     # {'__module__': '__main__', ... , '__weakref__': <attribute '__weakref__' of 'Car' objects>}
+print(car1.__dict__)    # {'_company': 'Ferrari', ... , '_id': 'FSC110'}
