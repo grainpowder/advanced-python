@@ -26,12 +26,14 @@ def WLLN(round_at):
 
 
 """
-In the code below, 'average_in_action' is executed 320 times, where each time random number from Unif(0,1) is generated and stored in 'numbers' defined in nonlocal scope.
-Since it returns sample mean of it, user can observe that it indeed converges in probability to 0.5
+In the code below, 'average_in_action' is executed 320 times.
+At each iteration, random number from Unif(0,1) is generated and stored in 'numbers' defined in nonlocal scope.
+Since it returns sample mean of them, user can observe that it indeed converges in probability to 0.5
 
 Note that there are two free variables in the nonlocal scope: numbers, round_at.
 Names and their values can be observed by using specific methods written below.
 """
+
 random.seed(1234)
 averager = WLLN(round_at=4)
 for iter in range(320):
