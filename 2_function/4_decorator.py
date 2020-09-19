@@ -17,26 +17,22 @@
 
 >> Template for defining decorator
 
-def name_of_a_decorator(func):
+def B(func):
     def feature1:
         ...
-    
     def feature2:
         ...
-
     ...
-    
     def main(*args):
         result = func(*args)
         ... operate A using functions defined in this scope and result from input function 'func' ...
         return final_result_to_be_returned
-
     return main
 
 >> Usage of decorator
     -> Simply attach 'at' sign with the name of a decorator to execute function defined right after in the nonlocal namespace
 
-        @decoratorname
+        @B
         def hello(parameters):
             ...
 
