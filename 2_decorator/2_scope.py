@@ -1,6 +1,6 @@
 """
 < Scope : Specific region that certain name is visible >
-    -> There are certain types of scope such as:
+    1. There are certain types of scope such as:
     # global scope
     ...
     def outer():
@@ -10,11 +10,11 @@
             # local scope
             ...
 
-    -> Rule of thumb when
+    2. Rule of thumb when
         reading : variable is searched from the current scope to shallower scope.
         writing : writing on the variable at current scope is allowed only.
 
-    -> So, if user tries to write on variable defined in namespace of other scope, user must declare that fact with certain keyword.
+        So, if user tries to write on variable defined in namespace of other scope, user must declare that fact with certain keyword.
         ex) global x    : command to enable writing on x in global scope
             nonlocal x  : command to enable writing on x in nonlocal scope
 """

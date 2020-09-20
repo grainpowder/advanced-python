@@ -1,23 +1,15 @@
 """
 < Closure : A function that remembers namespace of enclosing scope >
-    -> That is, for a function to be a closure, it must satisfy following:
-
-    1. It is nested function of another function
-    2. It uses variable defined in namespace of enclosing scope(i.e. free variable in nonlocal scope)
-    3. It is returned as an output of enclosing function
+    That is, for a function to be a closure, it must satisfy following:
+        1. It is nested function of another function
+        2. It uses variable defined in namespace of enclosing scope(i.e. free variable in nonlocal scope)
+        3. It is returned as an output of enclosing function
 """
 
 import random
 
 
 def WLLN(round_at):
-    """
-    Function to stack random numbers and return their sample mean to ensure it converges to population mean.
-    Note that 'average_in_action' function is
-        1. a nested function of 'WLLN'
-        2. using free variable defined in namespace of 'WLLN'
-        3. returned as an output of 'WLLN'
-    """
     numbers = []
     def average_in_action(value):
         numbers.append(value)
